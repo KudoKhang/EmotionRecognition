@@ -10,7 +10,8 @@ EMOTIONS = ["Tuc gian" ,"Kinh tom","So hai", "Hanh phuc", "Buon ba", "Bat ngo", 
 camera = cv2.VideoCapture(0)
 
 while True:
-    ret, frame = camera.read()    
+    ret, frame = camera.read()   
+    frame = cv2.flip(frame, 1) 
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -32,7 +33,6 @@ while True:
         roi = np.expand_dims(roi, axis=0)
         
         preds = emotion_classifier.predict(roi)[0]
-        emotion_probability = np.max(preds)
         label = EMOTIONS[preds.argmax()]
         
         cv2.rectangle(frame, (fX, fY), (fX + fW, fY + fH), (0, 255, 0), 2)
