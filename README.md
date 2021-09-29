@@ -219,8 +219,21 @@ cd EmotionRecognition
 python app.py
 ```
 
+Để sử dụng GUI của Gradio:
+
+```
+python gradio-app.py
+```
+
+<p align="center">
+	<img src="https://i.imgur.com/VcX9nOs.png" />
+</p>
+
 Kết quả cuối cùng:
 
 <p align="center">
 	<img src="https://media1.giphy.com/media/J11DaTiOI7a9BtkxG0/giphy.gif?cid=790b76110e10226fb5d26ed94c18522b30e1126c15ba0804&rid=giphy.gif&ct=g" />
 </p>
+
+# Summary
+Kể cả đối với chúng ta thì việc nhận biết cảm xúc của người khác cũng không phải lúc nào cũng chính xác 100% đặc biệt là những biểu cảm khó phân biệt nên chỉ nhìn vào 1 bức ảnh như KINH NGẠC hoặc SỢ HÃI... Model với độ chính xác chỉ 65% của chúng ta thì việc nhận diện nhầm những cảm xúc đó cũng khá dễ hiểu, thay vào đó nó dễ dàng nhận diện 2 cảm xúc có sự khác biệt rõ ràng nhất đó là HẠNH PHÚC và BÌNH THƯỜNG.
